@@ -21,6 +21,8 @@ CPPPATHS :=\
 	-I$(BSP_ROOT)/libraries/STM32F4xx_HAL/CMSIS/Include \
 	-I$(BSP_ROOT)/libraries/STM32F4xx_HAL/STM32F4xx_HAL_Driver/Inc \
 	-I$(RTT_ROOT)/components/drivers/include \
+	-I$(RTT_ROOT)/components/drivers/spi \
+	-I$(RTT_ROOT)/components/drivers/spi/sfud/inc \
 	-I$(RTT_ROOT)/components/finsh \
 	-I$(RTT_ROOT)/components/libc/compilers/minilibc \
 	-I$(RTT_ROOT)/include \

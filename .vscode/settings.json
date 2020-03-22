@@ -3,6 +3,17 @@
         "stdlib.h": "c",
         "types.h": "c",
         "libc.h": "c",
-        "rthw.h": "c"
+        "rthw.h": "c",
+        "sdram_port.h": "c",
+        "spi_flash_sfud.h": "c",
+        "dfs_posix.h": "c",
+        "drv_spi.h": "c",
+        "drv_config.h": "c",
+        "spi_config.h": "c",
+        "board.h": "c",
+        "rtdevice.h": "c",
+        "rtdebug.h": "c",
+        "type_traits": "c",
+        "spi_flash.h": "c"
     }
 }

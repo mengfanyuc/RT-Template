@@ -6,7 +6,7 @@
 
 /* RT-Thread Kernel */
 
-#define RT_NAME_MAX 8
+#define RT_NAME_MAX 16
 #define RT_ALIGN_SIZE 4
 #define RT_THREAD_PRIORITY_32
 #define RT_THREAD_PRIORITY_MAX 32
@@ -39,7 +39,7 @@
 #define RT_USING_DEVICE
 #define RT_USING_CONSOLE
 #define RT_CONSOLEBUF_SIZE 128
-#define RT_CONSOLE_DEVICE_NAME "uart1"
+#define RT_CONSOLE_DEVICE_NAME "uart2"
 #define RT_VER_NUM 0x40002
 #define ARCH_ARM
 #define RT_USING_CPU_FFS
@@ -73,8 +73,25 @@
 #define FINSH_ARG_MAX 10
 
 /* Device virtual file system */
+/*
+#define RT_USING_DFS
+#define DFS_USING_WORKDIR
+#define DFS_FILESYSTEMS_MAX 2
+#define DFS_FILESYSTEM_TYPES_MAX 2
+#define DFS_FD_MAX 16
+#define RT_USING_DFS_ELMFAT
+#define RT_USING_DFS_MNTTABLE
 
-
+#define RT_DFS_ELM_CODE_PAGE 437
+#define RT_DFS_ELM_WORD_ACCESS
+#define RT_DFS_ELM_USE_LFN_3
+#define RT_DFS_ELM_USE_LFN 3
+#define RT_DFS_ELM_MAX_LFN 255
+#define RT_DFS_ELM_DRIVES 2
+#define RT_DFS_ELM_MAX_SECTOR_SIZE 512
+#define RT_DFS_ELM_REENTRANT
+#define RT_USING_DFS_DEVFS
+*/
 /* Device Drivers */
 
 #define RT_USING_DEVICE_IPC
@@ -83,6 +100,11 @@
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
+#define RT_USING_SPI
+
+#define RT_USING_SFUD
+#define RT_SFUD_USING_SFDP
+#define RT_SFUD_SPI_MAX_HZ 50000000
 
 /* Using Hardware Crypto drivers */
 
@@ -94,7 +116,6 @@
 
 
 /* POSIX layer and C standard library */
-
 
 /* Network */
 
@@ -167,14 +188,17 @@
 
 /* Onboard Peripheral Drivers */
 
-#define BSP_USING_USB_TO_USART
-
 /* On-chip Peripheral Drivers */
 
 #define BSP_USING_GPIO
 #define BSP_USING_UART
-#define BSP_USING_UART1
-
+#define BSP_USING_UART2
+#define BSP_UART2_TX_USING_DMA
+#define BSP_USING_SDRAM
+#define BSP_USING_SPI3
+#define BSP_USING_SPI_FLASH
+#define BSP_SPI3_RX_USING_DMA
+#define BSP_SPI3_TX_USING_DMA
 /* Board extended module Drivers */
 
 

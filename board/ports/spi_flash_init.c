@@ -16,10 +16,10 @@
 #if defined(BSP_USING_SPI_FLASH)
 static int rt_hw_spi_flash_init(void)
 {
-    __HAL_RCC_GPIOF_CLK_ENABLE();
-    rt_hw_spi_device_attach("spi5", "spi50", GPIOF, GPIO_PIN_6);
+    __HAL_RCC_GPIOI_CLK_ENABLE();
+    rt_hw_spi_device_attach("spi3", "spi30", GPIOI, GPIO_PIN_8);
 
-    if (RT_NULL == rt_sfud_flash_probe("W25Q128", "spi50"))
+    if (RT_NULL == rt_sfud_flash_probe("W25Q128", "spi30"))
     {
         return -RT_ERROR;
     }

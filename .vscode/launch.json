@@ -9,6 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "stm32",
+            "targetArchitecture": "arm",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
@@ -27,13 +28,13 @@
             "miDebuggerServerAddress": "localhost:3333",
             "customLaunchSetupCommands": [
                 {
-                    "text": "target remote :3333",
-                    "description": "connect to server",
+                    "text": "file /home/mt/RT-Template/build/rt-thread.elf",
+                    "description": "load file to gdb",
                     "ignoreFailures": false
                 },
                 {
-                    "text": "file /home/mt/rt-thread-demo/build/rt-thread.elf",
-                    "description": "load file to gdb",
+                    "text": "target remote :3333",
+                    "description": "connect to server",
                     "ignoreFailures": false
                 },
                 {
