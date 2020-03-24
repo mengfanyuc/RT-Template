@@ -12,6 +12,8 @@ CXXFLAGS := -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunctio
 
 CPPPATHS :=\
 	-I$(BSP_ROOT)/applications \
+	-I$(BSP_ROOT)/applications/bsp_led \
+	-I$(BSP_ROOT)/applications/bsp_lcd \
 	-I$(BSP_ROOT)/board \
 	-I$(BSP_ROOT)/board/config/Inc \
 	-I$(BSP_ROOT)/board/ports \
@@ -27,6 +29,9 @@ CPPPATHS :=\
 	-I$(RTT_ROOT)/components/libc/compilers/minilibc \
 	-I$(RTT_ROOT)/include \
 	-I$(RTT_ROOT)/libcpu/arm/common \
-	-I$(RTT_ROOT)/libcpu/arm/cortex-m4 
+	-I$(RTT_ROOT)/libcpu/arm/cortex-m4 \
+	-I$(RTT_ROOT)/components/dfs/include \
+	-I$(RTT_ROOT)/components/dfs/filesystems/elmfat \
+	-I$(RTT_ROOT)/components/dfs/filesystems/fevfs 
 
 DEFINES := -DHAVE_CCONFIG_H -DRT_USING_MINILIBC -DSTM32F429xx -DUSE_HAL_DRIVER

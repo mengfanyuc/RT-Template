@@ -9,38 +9,23 @@
  * 2018-11-19     flybreak     add stm32f429-fire-challenger bsp
  */
 
-#include <rtthread.h>
-#include <rtdevice.h>
-#include <board.h>
-
-/* defined the LED */
-#define LEDR_PIN    GET_PIN(H, 10)
-#define LEDG_PIN    GET_PIN(H, 11)
-#define LEDB_PIN    GET_PIN(H, 12)
+#include "main.h"
 
 int main(void)
 {
-    int count = 1;
-    /* set LED pin mode to output */
-    rt_pin_mode(LEDR_PIN, PIN_MODE_OUTPUT);
-    rt_pin_mode(LEDG_PIN, PIN_MODE_OUTPUT);
-    rt_pin_mode(LEDB_PIN, PIN_MODE_OUTPUT);
+    rt_thread_t tid;
 
-    while (count++)
-    {
-        rt_pin_write(LEDR_PIN, PIN_HIGH);
-        rt_pin_write(LEDG_PIN, PIN_LOW);
-        rt_pin_write(LEDB_PIN, PIN_LOW);
-        rt_thread_mdelay(250);
-        rt_pin_write(LEDR_PIN, PIN_LOW);
-        rt_pin_write(LEDG_PIN, PIN_HIGH);
-        rt_pin_write(LEDB_PIN, PIN_LOW);
-        rt_thread_mdelay(250);
-        rt_pin_write(LEDR_PIN, PIN_LOW);
-        rt_pin_write(LEDG_PIN, PIN_LOW);
-        rt_pin_write(LEDB_PIN, PIN_HIGH);
-        rt_thread_mdelay(250);
-    }
+    tid = rt_thread_create("bsp_led", bsp_led_entry, RT_NULL,
+                           RT_LED_THREAD_STACK_SIZE, RT_LED_THREAD_PRIORITY, 20);
+    RT_ASSERT(tid != RT_NULL);
+    
+    rt_thread_startup(tid);
+
+    tid = rt_thread_create("bsp_lcd", bsp_lcd_entry, RT_NULL,
+                           RT_LCD_THREAD_STACK_SIZE, RT_LCD_THREAD_PRIORITY, 20);
+    RT_ASSERT(tid != RT_NULL);
+    
+    rt_thread_startup(tid);
 
     return RT_EOK;
 }

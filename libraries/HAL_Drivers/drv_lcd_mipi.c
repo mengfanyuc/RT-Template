@@ -11,7 +11,7 @@
 #include <board.h>
 
 #ifdef BSP_USING_LCD_MIPI
-#include <lcd_port.h>
+#include <bsp_lcd_.h>
 #include <string.h>
 
 DSI_HandleTypeDef   hdsi;
