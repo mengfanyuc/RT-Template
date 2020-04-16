@@ -1,3 +1,9 @@
+/*
+ * @Description: 
+ * @Version: 1.0
+ * @Autor: mengfanyu
+ * @Date: 2020-03-24 12:47:15
+ */
 #ifndef __BSP_LCD_H__
 #define __BSP_LCD_H__
 
@@ -33,8 +39,9 @@ struct drv_lcd_device
 #define LCD_BL_GPIO_NUM     GET_PIN(D, 7)
 #define LCD_DISP_GPIO_NUM   GET_PIN(D, 4)
 
-#define RT_LCD_THREAD_STACK_SIZE 512
-#define RT_LCD_THREAD_PRIORITY 10
+#define RT_LCD_THREAD_STACK_SIZE    512
+#define RT_LCD_THREAD_PRIORITY      10
+#define RT_LCD_THREAD_TIMESLICE     10
 
 void bsp_lcd_entry(void *parameter);
 

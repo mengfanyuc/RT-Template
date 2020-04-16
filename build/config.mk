@@ -14,6 +14,7 @@ CPPPATHS :=\
 	-I$(BSP_ROOT)/applications \
 	-I$(BSP_ROOT)/applications/bsp_led \
 	-I$(BSP_ROOT)/applications/bsp_lcd \
+	-I$(BSP_ROOT)/applications/bsp_touch \
 	-I$(BSP_ROOT)/board \
 	-I$(BSP_ROOT)/board/config/Inc \
 	-I$(BSP_ROOT)/board/ports \
@@ -23,8 +24,10 @@ CPPPATHS :=\
 	-I$(BSP_ROOT)/libraries/STM32F4xx_HAL/CMSIS/Include \
 	-I$(BSP_ROOT)/libraries/STM32F4xx_HAL/STM32F4xx_HAL_Driver/Inc \
 	-I$(RTT_ROOT)/components/drivers/include \
+	-I$(RTT_ROOT)/components/drivers/include/drivers \
 	-I$(RTT_ROOT)/components/drivers/spi \
 	-I$(RTT_ROOT)/components/drivers/spi/sfud/inc \
+	-I$(RTT_ROOT)/components/drivers/touch \
 	-I$(RTT_ROOT)/components/finsh \
 	-I$(RTT_ROOT)/components/libc/compilers/minilibc \
 	-I$(RTT_ROOT)/include \

@@ -13,3 +13,9 @@ add:bsp_lcd
 add:elmfat file system  
 move:lcd_port.h to bsp_lcd.h  
 modify:usart2 conflict with lcd pins use usart1 to debug port  
+
+####2020-4-16####  
+add:soft i2c  
+add:gt9157 driver  
+add:bsp_touch  
+

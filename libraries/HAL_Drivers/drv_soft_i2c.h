@@ -14,6 +14,7 @@
 #include <rtthread.h>
 #include <rthw.h>
 #include <rtdevice.h>
+#include "bsp_touch.h"
 
 /* stm32 config class */
 struct stm32_soft_i2c_config

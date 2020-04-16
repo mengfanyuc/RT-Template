@@ -17,7 +17,8 @@
         {
             "label": "telnet localhost 4444",
             "type": "shell",
-            "command": "telnet localhost 4444 && exit"
+            "command": "telnet localhost 4444 && exit",
+            "problemMatcher": []
         }
     ],
 }

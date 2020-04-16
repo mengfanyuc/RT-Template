@@ -21,6 +21,22 @@
         "rtthread.h": "c",
         "main.h": "c",
         "bsp_lcd.h": "c",
-        "bsp_led.h": "c"
+        "bsp_led.h": "c",
+        "drv_soft_i2c.h": "c",
+        "bsp_touch.h": "c",
+        "touch.h": "c",
+        "drv_gpio.h": "c"
+    }
+    "fileheader.customMade": {    
+        "Description": "",
+        "Version": "1.0",
+        "Autor": "mengfanyu",
+        "Date": "Do not edit"
+    }，
+    "fileheader.cursorMode": { 
+        "description":"",
+        "param": "",
+        "return": "",
+        "author":"mengfanyu"
     }
 }
