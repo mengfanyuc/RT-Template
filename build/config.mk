@@ -3,7 +3,7 @@ TARGET_NAME := rt-thread
 BSP_ROOT ?= ..
 RTT_ROOT ?= ../rt-thread
 
-CROSS_COMPILE ?=/usr/bin/arm-none-eabi-
+CROSS_COMPILE ?= arm-none-eabi-
 
 CFLAGS := -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Dgcc -O0 -gdwarf-2 -g
 AFLAGS := -c -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -x assembler-with-cpp -Wa,-mimplicit-it=thumb  -gdwarf-2

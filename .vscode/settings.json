@@ -1,4 +1,5 @@
 {
+    "terminal.integrated.shell.windows": "cmd.exe",
     "files.associations": {
         "stdlib.h": "c",
         "types.h": "c",
